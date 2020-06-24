@@ -23,6 +23,14 @@ HPC2$datetime <- strptime(paste(HPC2$Date, HPC2$Time), format = "%d/%m/%Y %H:%M:
 
 x = as.POSIXct(HPC2$datetime)
 
+GAP = as.numeric(HPC2$Global_active_power)
+
+y1 = as.numeric(HPC2$Sub_metering_1)
+
+y2 = as.numeric(HPC2$Sub_metering_2)
+
+y3 = as.numeric(HPC2$Sub_metering_3)
+
 png (filename = "./plot4.png", width = 480, height = 480, units = "px", bg = "white")
 
 par (mfrow = c(2,2))
