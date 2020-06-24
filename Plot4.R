@@ -37,7 +37,7 @@ par (mfrow = c(2,2))
 
 plot(x, GAP, type = 'l', ylab = "Global Activity Power (kilowatts)", xlab = "")
 
-plot (x, HPC2$Voltage, ylab = "Voltage", xlab = "datetime")
+plot (x, HPC2$Voltage, type = 'l', ylab = "Voltage", xlab = "datetime")
 
 plot(x,y1, type = 'l', ylab = "Energy sub metering", xlab = "")
 
@@ -47,6 +47,6 @@ lines(x,y3,type = 'l', col="blue")
 
 legend("topright",lty = 1, col = c("black", "red", "blue"), bty = "n", legend = c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"))
 
-plot(x, HPC2$Global_reactive_power, xlab = "datetime", ylab = "Global_reactive_power")
+plot(x, HPC2$Global_reactive_power, type = 'l', xlab = "datetime", ylab = "Global_reactive_power")
 
 dev.off
